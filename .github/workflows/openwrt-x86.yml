@@ -13,8 +13,8 @@ on:
   push:
     branches: 
       - master
-    schedule:
-      - cron: 0 20 * * *
+  # schedule:
+  #   - cron: 0 20 * * *
   # release:
   #   types: [published]
 
@@ -97,11 +97,11 @@ jobs:
           # 
 
           # 编译x64固件:
-            cat >> .config <<EOF
-            CONFIG_TARGET_brcm47xx=y
-            CONFIG_TARGET_brcm47xx_generic=y
-            CONFIG_TARGET_MULTI_PROFILE=y
-            EOF
+          # cat >> .config <<EOF
+          # CONFIG_TARGET_x86=y
+          # CONFIG_TARGET_x86_64=y
+          # CONFIG_TARGET_x86_64_Generic=y
+          # EOF
 
           # 固件压缩:
           # cat >> .config <<EOF
